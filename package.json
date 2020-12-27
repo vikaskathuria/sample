@@ -1,0 +1,50 @@
+{
+  "name": "Sample",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "npx react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "link": "react-native link",
+    "pod": "cd ios; pod install; cd ..",
+    "rel": "cd android; ./gradlew assembleRelease; cd ..",
+    "bundle": "cd android; ./gradlew bundleRelease; cd ..",
+    "clean": "cd android; ./gradlew clean; cd ..",
+    "variant": "react-native run-android --variant=release",
+    "log": "react-native log-android",
+    "build:assets": "fc-build-assets --fc-template ./assets/fusioncharts-tpl.html",
+    "clear-cache": "react-native cache clean --force && yarn && react-native start -- --reset-cache",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-firebase/app": "^7.2.0",
+    "@react-native-firebase/messaging": "^7.1.4",
+    "@react-navigation/bottom-tabs": "^5.5.0",
+    "@react-navigation/drawer": "^5.8.0",
+    "@react-navigation/native": "^5.4.3",
+    "@react-navigation/stack": "^5.4.0",
+    "react": "16.13.1",
+    "react-native": "0.62.2",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-safe-area-context": "^2.0.0",
+    "react-native-screens": "^2.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/runtime": "^7.9.6",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^7.1.0",
+    "jest": "^26.0.1",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
